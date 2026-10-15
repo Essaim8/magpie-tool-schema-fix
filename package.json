@@ -1,7 +1,7 @@
 {
   "name": "magpie-tool-schema-fix",
-  "version": "0.1.0",
-  "description": "Magpie gateway middleware that adds missing object types to tool JSON Schemas (yetone/magpie#2179)",
+  "version": "0.2.0",
+  "description": "Magpie gateway middleware that adds missing object types to tool JSON Schemas for the models it names (yetone/magpie#2179)",
   "type": "module",
   "private": true,
   "repository": {
@@ -20,6 +20,12 @@
     "test": "node --test"
   },
   "magpie": {
-    "middleware": "./tool-schema-fix.middleware.js"
+    "middleware": "./tool-schema-fix.middleware.js",
+    "options": {
+      "models": [
+        "mirasim/gemini-4-argon"
+      ],
+      "agents": []
+    }
   }
 }
